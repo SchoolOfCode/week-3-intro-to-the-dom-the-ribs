@@ -51,10 +51,36 @@ newP.textContent = "This is a dynamically added paragraph."
 document.body.appendChild(newP)
 
 //3C
-const firstP = document.querySelector(".content")
+const firstP = document.querySelectorAll(".content")
 firstP.textContent = "This paragraph has been updated."
 
-//3d
-const secondP = document.querySelectorAll(".content")[1]
-//console.log(secondP)
+//3dModifying Attributes: Select the second `<p>` element with the class "content".
+const secondP = document.querySelectorAll(".content")[1];
+console.log(secondP)
+//Add a title attribute with the value "Hover over me!" using JavaScript.
 secondP.title = "Hover over me!"
+
+//3e Adding and Removing Classes
+const ulElement = document.getElementById("itemList");
+
+//Add a new class "styled-list" to it using JavaScript.
+ulElement.classList.add("styled-list");
+console.log(ulElement);
+
+//Select the `<li>` element with the content "🍌 Banana".
+const bananaLi = document.querySelectorAll(".list-item")[1];
+
+//Remove the class "list-item" from it using JavaScript.
+bananaLi.classList.remove("list-item")
+console.log(bananaLi)
+
+
+//3f  Removing Elements
+//Select the `<li>` element with the content "🍇 Date".
+const dateLi = document.querySelectorAll('li')[3];
+
+
+//Remove it from the DOM using JavaScript.
+dateLiParent = dateLi.parentNode;
+dateLiParent.removeChild(dateLi)
+console.log(dateLiParent)
